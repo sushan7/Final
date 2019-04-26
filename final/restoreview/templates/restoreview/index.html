@@ -1,0 +1,17 @@
+{% extends "restoreview/header.html" %}
+
+{% block content %}
+
+	<div class="container info-boxes pt100 pb100">
+	<p></p>
+		<p> Restaurent list </p>
+	
+	{% for resto in restos %}
+	
+		<p>{{ resto.resto_name }}</p>
+		<p>{{ resto.resto_review }}</p>
+		
+	{% endfor %}
+	</div>
+
+{% endblock%}

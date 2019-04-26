@@ -1,0 +1,69 @@
+{% extends "restoreview/header.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="contact-form medium-padding120">
+    <from class="contact-form" method="POST" action="/add_resto_form_submission/">
+      {% csrf_token %}
+<!--
+        <div class="form-row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <input name="resto_name" class="form-control" placeholder="Name" type="text">
+            <br> </br>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <input name="resto_type" class="form-control" placeholder="Type" type="text">
+            <br> </br>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <input name="resto_review" class="form-control" placeholder="Review" type="text">
+            <br> </br>
+          </div>
+        </div>
+
+        <div class="form-row" >
+          <div class="col">
+            <textarea rows="8" cols="80" name="resto_detail" class="form-control" placeholder="Detail" type="text"></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="submit-block table">
+            <div class="col-lg-3 table-cell">
+              <button class="btn btn-small btn--primary">
+                <span class="text">Add restaurant</span>
+              </button>
+            </div>
+          </div>
+        </div>
+-->
+  <div class="form-row">
+    <div class="col">
+      <input name="resto_name" type="text" class="form-control" placeholder="Name">
+      <br></br>
+    </div>
+    <div class="col">
+      <input name="resto_type" type="text" class="form-control" placeholder="Type">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input name="resto_review" type="text" class="form-control" placeholder="Review">
+      <br></br>
+    </div>
+  </div>
+  <div class="form-row" >
+          <div class="col">
+            <textarea rows="8" cols="80" name="resto_detail" class="form-control" placeholder="Detail" type="text"></textarea>
+              <br> </br>
+          </div>
+        </div>
+  <button type="submit" class="btn btn-primary">Add Restaurant</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
